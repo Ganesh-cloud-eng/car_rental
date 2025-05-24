@@ -18,7 +18,7 @@ const sendTokenAdmin = (admin, statusCode, res)=>{
             ), 
             httpOnly:true
         }                 
-    res.status(statusCode).cookie('Admin_token',token,options).redirect('/admin') 
+    res.status(statusCode).cookie('Admin_token',token,options).redirect('/superadmin') 
     
        
 }

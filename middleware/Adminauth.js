@@ -30,7 +30,7 @@ const isAuthenticatedAdmin = async (req, res, next) => {
     const { Admin_token } = req.cookies;
 
     if (!Admin_token) {
-        return res.redirect('/admin/login');
+        return res.redirect('/superadmin/login');
     }
 
     try {
@@ -41,7 +41,7 @@ const isAuthenticatedAdmin = async (req, res, next) => {
             req.admin = results[0];
             next();
     } catch (error) {
-        return res.redirect('/admin/login');
+        return res.redirect('/superadmin/login');
     }
 };
 

@@ -1,5 +1,6 @@
 import express from 'express'
-import { Add_coupan_code, add_user, Country_Add_Country, Create_Subadmin, Deposits_Fee_Details, faq_owner_faq, faq_user_faq, Invitation_Amount_Details, Multi_Currency, Notification, Owner_add_Owner, owner_Documents_mgmt, owner_Rating, Owner_view_Owner, Owner_Withdrawl_Report, pending_report, Privacy_policy_owner, Privacy_policy_user, Refer_Amount_Details, report_Complete_Report, report_Confirm_Report, report_Ongoing_Report, Setting_page, Slide_Add_App_Slider, super_home, Support_About, Support_Contact, Support_Inquiry, Terms_Condition_owner, Terms_Condition_user, User_Documents_mgmt, user_rating, user_Withdrawl_Report, Vehial_Promotion_Details, Vehical_Category_make, Vehical_Features, Vehical_Model, Vehical_Type_Vehical, Vehical_View_Vehical, Video_add_Video, view_users } from '../controllers/superadminController.js';
+import { Add_coupan_code, add_user, Country_Add_Country, Create_Subadmin, Deposits_Fee_Details, faq_owner_faq, faq_user_faq, Invitation_Amount_Details, login, loginAdmin, Multi_Currency, Notification, Owner_add_Owner, owner_Documents_mgmt, owner_Rating, Owner_view_Owner, Owner_Withdrawl_Report, pending_report, Privacy_policy_owner, Privacy_policy_user, Refer_Amount_Details, report_Complete_Report, report_Confirm_Report, report_Ongoing_Report, Setting_page, Slide_Add_App_Slider, super_home, Support_About, Support_Contact, Support_Inquiry, Terms_Condition_owner, Terms_Condition_user, User_Documents_mgmt, user_rating, user_Withdrawl_Report, Vehial_Promotion_Details, Vehical_Category_make, Vehical_Features, Vehical_Model, Vehical_Type_Vehical, Vehical_View_Vehical, Video_add_Video, view_users } from '../controllers/superadminController.js';
+import { isAuthenticatedAdmin } from '../middleware/Adminauth.js';
 
 
 
@@ -8,7 +9,10 @@ const router = express.Router();
 
 //------------- Routing Start -----------------------
 
-router.route('/').get(super_home)
+router.route('/').get( isAuthenticatedAdmin , super_home)
+
+router.route('/login').get(login)
+router.route('/login').post(loginAdmin)
 
 router.route('/add_user').get(add_user)
 

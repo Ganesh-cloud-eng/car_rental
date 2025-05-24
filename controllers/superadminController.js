@@ -1,5 +1,9 @@
+import connection from '../config.js'
+import * as path from 'path';
+import * as url from 'url';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-
+import { sendTokenAdmin } from '../utils/jwtToken.js';
 
 
 const super_home = async (req, res, next) => {
@@ -10,6 +14,48 @@ const super_home = async (req, res, next) => {
 }
 
 
+const login = async (req, res, next) => {
+ try {
+ res.render('superadmin/login', {output:''})
+  } catch (error) {
+ res.render('superadmin/error500.ejs')
+ }
+}  
+
+ export const loginAdmin = async (req,res,next)=>{     
+
+  console.log(req.body)
+  
+  const con = await connection();  
+
+  const {username,password} = req.body; 
+  //if user don't enter email password
+  if(!username || !password){    
+      // res.json("Please Enter Email and Password")
+       res.render('superadmin/login',{'output':'Please Enter Username and Password'})
+      
+  }
+  else 
+  {
+
+      const [results] = await con.query('SELECT * FROM tbl_admin WHERE username = ?', [username]);                 
+      const admin = results[0];    
+
+       if(!admin){                
+         //res.json("Invalid Email & Password")  
+        res.render('superadmin/login',{'output':'Invalid Username'})         
+          }
+           else if (admin.password != password) {
+                        
+           res.render('superadmin/login',{'output':'Incorrect Password'})   
+          }
+          else {             
+           sendTokenAdmin(admin,200,res)
+           }  
+   
+ 
+  }    
+}
 
 const add_user = async (req, res, next) => {
 
@@ -426,10 +472,11 @@ const Terms_Condition_owner = async (req, res, next) => {
 }  
 
 
+
 //--------------------- Export Start ------------------------------------------
 export { super_home, add_user,view_users ,user_Withdrawl_Report ,User_Documents_mgmt ,Owner_add_Owner,Owner_view_Owner,Owner_Withdrawl_Report,owner_Documents_mgmt , pending_report, report_Confirm_Report , report_Ongoing_Report,report_Complete_Report , report_Cancel_Report ,Vehical_Category_make , Vehical_Model , Vehical_Type_Vehical,Vehical_Features,Vehical_View_Vehical, Vehial_Promotion_Details,Create_Subadmin
   ,Country_Add_Country , Multi_Currency ,Setting_page ,Slide_Add_App_Slider , Video_add_Video , Notification ,user_rating , owner_Rating , Refer_Amount_Details , Invitation_Amount_Details ,Deposits_Fee_Details , faq_owner_faq , faq_user_faq  , Privacy_policy_user
-  , Add_coupan_code , Support_Inquiry , Support_About , Support_Contact , Privacy_policy_owner ,Terms_Condition_user , Terms_Condition_owner
+  , Add_coupan_code , Support_Inquiry , Support_About , Support_Contact , Privacy_policy_owner ,Terms_Condition_user , Terms_Condition_owner , login
 }
 
 
