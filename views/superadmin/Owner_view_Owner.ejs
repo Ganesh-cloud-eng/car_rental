@@ -1,0 +1,332 @@
+    <%- include('superheader.ejs'); %>
+
+<%- include('supersidebar.ejs'); %>
+      <!-- Sidebar chat end-->
+      <div class="content-wrapper">
+         <!-- Container-fluid starts -->
+         <!-- Main content starts -->
+         <div class="container-fluid">
+             <div class="row ">
+                <div class="col-lg-12">
+                    <div class="bread-boxes">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html"> Home </a></li>
+                               <li><a href="#"> / Owner Managements </a></li>
+                            <li class="active"> / View Owner Management </li>        
+                          </ol>
+                    </div>
+                </div>
+                <!--   <div class="col-lg-6">
+               <div class="headings headings-boxess mt-4">
+                  <div class="main-headers mt-0" style="margin-top: 0px !important;">
+                    <h4> <i class="fa fa-arrow-circle-o-left yellow_color"></i>  User View User </h4>
+                     </div>
+                </div>
+             </div> -->
+                    
+            </div>
+            <!-- 1-3-block row start -->
+            <div class="row">
+               <div class="col-lg-12">
+                <div class="card mb-4" style="border-top:4px solid black;">
+               <div class="cards-headers py-3 px-3 d-flex flex-row align-items-center justify-content-between">
+                     <div class="heads-lefts">
+                  <h6 class=" font-weight-bold "> <i class="fa fa-arrow-circle-o-left"></i>  View Owner </h6>
+                 </div>
+                    <div class="heads-rights">
+                    <a class="btn btn-success waves-effect waves-light " href="Owner_add_Owner.html"><i class="fa fa-user  mr-1"></i> Add Owner  </a>
+                  </div>
+                  </div>
+                  <div class="user-form">
+                     <div class="table-reponsive box">
+                        <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                          <div class="row">
+                          <table id="example" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="example_info">
+                        <thead>
+                             <tr role="row">
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Day: activate to sort column ascending" style="width: 15.0781px;">Id</th>
+                              <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Day: activate to sort column ascending" style="width: 50.0781px;"> Business Name</th>
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Gross: activate to sort column ascending" style="width: 50.922px;">First Name</th>
+                                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Gross: activate to sort column ascending" style="width: 50.922px;"> Last Name</th>
+                              <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Gross: activate to sort column ascending" style="width: 25.922px;">Email</th>
+                              <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="5%: activate to sort column ascending" style="width: 60.1719px;">Mobile No</th>
+                                   <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Net: activate to sort column ascending" style="width: 70.5625px;">Wallet Balance</th>
+                                 <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Net: activate to sort column ascending" style="width: 60.5625px;">bussness id image </th>
+                              <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Net: activate to sort column ascending" style="width: 60.5625px;">Customer Image</th>
+                              <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Net: activate to sort column ascending" style="width: 50.5625px;">Status</th>
+                              <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 190.156px;">Action</th>
+                            </tr>
+                        </thead>
+                           <div class="table-responsive">
+                              </div>
+                              <tbody>
+                              <tr>
+                                  <td>1</td>
+                                <td>Velocity Car Rentals</td>
+                                 <td>Smith</td>
+                                  <td>John</td>
+                                <td>John0@gmail.com</td>
+                                <td>+91-8880001001</td>
+                               <td>Rs 10560 </td>
+                                <td class="text-truncate">
+                              <ul class="list-unstyled order-list m-b-0 m-b-0"><li class="team-member team-member-sm">
+                              <a href="owner_Add_image.html"><img class="img-circle" src="assets/images/car-img.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith"></a>
+                             <a href="owner_Add_image.html"> <img class="img-circle" src="assets/images/car-img.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith"></a>
+                              </li></ul></td>
+                              <td>
+                                 <a href="owner_Add_image.html"><img class="img-circle" src="assets/images/avatar-1.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith"></a> </li>
+                               </td>
+                                <td>
+                                  <div class="badge badge-success">Edit</div>
+                                </td>
+                                <td>
+                                  <a class="buttons" href="#popup1"><i class="fa fa-eye icon-1"></i></a>
+                                  <a data-toggle="modal"  href="#edit_personal_details"><i class="fa fa-edit icon-2"></i></a>
+                                  <a href="#"><i class="fa fa-check-square-o icon-3"></i></a>
+                                  <a href="#"><i class="fa fa-times icon-4"></i></a>
+                                  <a href="#"><i class="fa fa-trash icon-5"></i></a>
+                                  <a href="Owners_add_amounts.html"><i class="fa fa-money icon-6"></i></a>
+                             </td>
+                              </tr>
+                              <tr>
+                                  <td>2</td>
+                                  <td>RapidRent Cars </td>
+                                   <td>Smith</td>
+                                  <td>John</td>
+                                  <td>Smith8@gmail.com</td>
+                                  <td>+91-9990001001</td>
+                               <td>Rs 10560 </td>
+                                  <td class="text-truncate">
+                              <ul class="list-unstyled order-list m-b-0 m-b-0"><li class="team-member team-member-sm">
+                              <img class="img-circle" src="assets/images/car-img.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith">
+                              </li></ul></td>
+                              <td>
+                                 <img class="img-circle" src="assets/images/avatar-1.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith"></li>
+                               </td>
+                                <td>
+                                  <div class="badge badge-danger">Pending</div>
+                                </td>
+                                   <td>
+                                  <a href="#"><i class="fa fa-eye icon-1"></i></a>
+                                  <a href="#"><i class="fa fa-edit icon-2"></i></a>
+                                  <a href="#"><i class="fa fa-check-square-o icon-3"></i></a>
+                                  <a href="#"><i class="fa fa-times icon-4"></i></a>
+                                  <a href="#"><i class="fa fa-trash icon-5"></i></a>
+                                  <a href="Owners_add_amounts.html"><i class="fa fa-money icon-6"></i></a>
+                             </td>
+                              </tr>
+                              <tr>
+                                  <td>3</td>
+                                  <td>Velocity Car Rentals</td>
+                                   <td>Smith</td>
+                                  <td>John</td>
+                                  <td>John0@gmail.com</td>
+                                  <td>+91-8880001001</td>
+                               <td>Rs 10560 </td>
+                                  <td class="text-truncate">
+                              <ul class="list-unstyled order-list m-b-0 m-b-0"><li class="team-member team-member-sm">
+                              <img class="img-circle" src="assets/images/car-img.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith">
+                              <img class="img-circle" src="assets/images/car-img.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith">
+                              </li></ul></td>
+                              <td>
+                                 <img class="img-circle" src="assets/images/avatar-1.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith"></li>
+                               </td>
+                                <td>
+                                  <div class="badge badge-info">Delete</div>
+                                </td>
+                                   <td>
+                                  <a href="#"><i class="fa fa-eye icon-1"></i></a>
+                                  <a href="#"><i class="fa fa-edit icon-2"></i></a>
+                                  <a href="#"><i class="fa fa-check-square-o icon-3"></i></a>
+                                  <a href="#"><i class="fa fa-times icon-4"></i></a>
+                                  <a href="#"><i class="fa fa-trash icon-5"></i></a>
+                                  <a href="Owners_add_amounts.html"><i class="fa fa-money icon-6"></i></a>
+                             </td>
+                              </tr>
+                              <tr>
+                                  <td>4</td>
+                                  <td>RapidRent Cars </td>
+                                   <td>Smith</td>
+                                  <td>John</td>
+                                  <td>Smith8@gmail.com</td>
+                                  <td>+91-9990001001</td>
+                               <td>Rs 10560 </td>
+                               <td class="text-truncate">
+                              <ul class="list-unstyled order-list m-b-0 m-b-0"><li class="team-member team-member-sm">
+                              <img class="img-circle" src="assets/images/car-img.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith">
+                              </li></ul></td>
+                              <td>
+                                 <img class="img-circle" src="assets/images/avatar-1.png" alt="user" data-toggle="tooltip" title="" data-original-title="Sarah Smith"></li>
+                               </td>
+                                <td>
+                                  <div class="badge badge-success">Edit</div>
+                                </td>
+                                   <td>
+                                  <a href="#"><i class="fa fa-eye icon-1"></i></a>
+                                  <a href="#"><i class="fa fa-edit icon-2"></i></a>
+                                  <a href="#"><i class="fa fa-check-square-o icon-3"></i></a>
+                                  <a href="#"><i class="fa fa-times icon-4"></i></a>
+                                  <a href="#"><i class="fa fa-trash icon-5"></i></a>
+                                  <a href="Owners_add_amounts.html"><i class="fa fa-money icon-6"></i></a>
+                             </td>
+                              </tr>
+                             
+                              </tbody>
+                            </table>
+                        </div>
+                      </div>
+                  </div>
+                   </div>
+                 </div> 
+               </div>
+            </div>
+            <!-- 1-3-block row end -->
+
+             <!-- row start  -->
+             <div class="row">
+               <div class="col-lg-12">
+                 <div class="card footers">
+                     <div class="card-header footer text-center">
+                         © Copyright 2024 <strong><span>Car Rental </span></strong>.
+                          All Rights Reserved   Designed & Developed by 
+                          <a href="https://cyberimpulses.com/" target="_blank">CISS</a>
+                       </div>
+                  </div>
+               </div>
+            </div>
+                <!-- ROW END -->
+         </div>
+         <!-- Main content ends -->
+         <!-- Container-fluid ends -->
+      </div>
+   </div>
+<!--  -->
+
+<!--  -->
+<!-- VIEW Details Modal POPUP CODE START -->
+
+<div id="popup1" class="popup">
+  <div class="view-header">
+      <a href="#" class="close">&times;</a>
+  <h4>View Table</h4>
+  </div>
+  <p class="view-lists">
+      <table class="table">
+     <tbody>
+              <tr>
+                  <td>First Name</td>
+                   <td>John</td>
+              </tr>
+               <tr>
+                  <td>Last Name</td>
+                   <td> Deo</td>
+              </tr>
+               <tr>
+                  <td>Email address</td>
+                   <td>John@gmail.com</td>
+              </tr>
+               <tr>
+                  <td>Password</td>
+                   <td>123456</td>
+              </tr>
+                <tr>
+                  <td>Mobile No</td>
+                   <td>+91-9876543210</td>
+              </tr>
+
+                <tr>
+                  <td>Govt Id</td>
+                   <td>Govt Id</td>
+              </tr>
+                <tr>
+                  <td>Front Image</td>
+                <td> <img src="assets/images/passport-1.png" style="width:30px;"> </td>
+              </tr>
+               <tr>
+                  <td>Back Image</td>
+                <td> <img src="assets/images/passport-2.png" style="width:30px;"> </td>
+              </tr>
+               <tr>
+                  <td>Customer Image</td>
+                <td> <img src="assets/images/avatar-1.png" style="width:30px;"> </td>
+              </tr>
+     </tbody>
+      </table>
+       <button type="submit" class="btn btn-primary pt-2 pb-2 btn-block">Save Changes</button>
+  </p>
+</div>
+<a href="#" class="close-popup"></a>
+
+<!-- VIEW BUTTON POPUP CSS SSTART  -->
+<!-- Edit Details Modal -->
+ <div class="modal fade" id="edit_personal_details" aria-hidden="true" role="dialog">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title">Personal Details</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">×</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <form>
+           <div class="row form-row">
+             <div class="col-12 col-sm-12">
+               <div class="form-group">
+                 <label>Business Name</label>
+                 <input type="text" class="form-control" value="Business ">
+               </div>
+             </div>
+             <div class="col-12 col-sm-6">
+               <div class="form-group">
+                 <label>First Name</label>
+                 <input type="text" class="form-control" value="John">
+               </div>
+             </div>
+             <div class="col-12 col-sm-6">
+               <div class="form-group">
+                 <label>Last Name</label>
+                 <input type="text" class="form-control" value="Doe">
+               </div>
+             </div>
+             <div class="col-12 col-sm-12">
+               <div class="form-group">
+                 <label>Email ID</label>
+                 <input type="email" class="form-control" value="johndoe@example.com">
+               </div>
+             </div>
+                    <div class="form-group col-md-6">
+                 <!-- <i class="fa fa-address-card icon-set"></i> -->
+                <label for="exampleInputpassword" class="form-control-label"> password </label>
+                <input type="password" class="form-control" id="exampleInputpassword" placeholder="Enter password">
+             </div>
+             <div class="col-12 col-sm-6">
+               <div class="form-group">
+                 <label>Mobile</label>
+                 <input type="text" value="+1 202-555-0125" class="form-control">
+               </div>
+             </div>
+              <div class="col-12 col-sm-6">
+               <div class="form-group">
+                 <label>Owner Image</label>
+                 <input type="file" value="Front Image" class="form-control">
+               </div>
+             </div>
+              <div class="col-12 col-sm-6">
+               <div class="form-group">
+                 <label>business id image</label>
+                 <input type="file" value="Front Image" class="form-control">
+               </div>
+             </div>
+
+           </div>
+           <button type="submit" class="btn btn-primary pt-2 pb-2 btn-block">Save Changes</button>
+         </form>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- /Edit Details Modal -->
+
+   <!-- Required Jqurey -->
+      <%- include('superfooter.ejs'); %>
